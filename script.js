@@ -179,6 +179,8 @@ function cursorAnimation(){
 }
 function loaderAnimation(){
     var tl = gsap.timeline();
+    // Add class to body to prevent scrolling
+document.body.classList.add('no-scroll');
 tl.from(".line h1",{
     y:150,
     stagger: 0.25,
@@ -207,7 +209,11 @@ tl.to('.line h2',{
 tl.to('.loader', {
     opacity:0,
     duration: 0.2,
-    delay:4
+    delay:4,
+    onComplete: function() {
+        // Remove the 'no-scroll' class from the body after animation is complete
+        document.body.classList.remove('no-scroll');
+    }
 });
 tl.from('.page1',{
     delay:0.2,
@@ -242,11 +248,20 @@ function page3ImgEffect(){
       });
 }
 function flagEffect(){
-    document.addEventListener('mousemove', function(dets){
-        gsap.to('#flag',{
-            x:dets.x,
-            y:dets.y,
-        })
+    const hero3 = document.getElementById('hero3');
+    const flag = document.getElementById('flag');
+    const flagWidth = flag.offsetWidth;
+    const flagHeight = flag.offsetHeight;
+    hero3.addEventListener('mousemove', function(dets){
+        const heroRect = hero3.getBoundingClientRect();
+            const offsetX = dets.clientX - heroRect.left;
+            const offsetY = dets.clientY - heroRect.top;
+
+            gsap.to('#flag', {
+                x: offsetX,
+                y: offsetY,
+            });
+
     })
     document.querySelector('#hero3').addEventListener('mouseenter', function(){
         gsap.to('#flag',{
