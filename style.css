@@ -19,10 +19,18 @@
 }
 
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Plain Light';
     color: #fff;
 }
@@ -63,18 +71,32 @@ body{
     padding: 25vh 10vw;
 }
 .line{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 3vw;
 }
 /* Counter */
 #line1-part1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 1vw;
 }
 #line1-part1 h5{
@@ -93,8 +115,10 @@ body{
     font-weight: 900;
     /* animation-name: loaderNow; */
     opacity: 0;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 /* All H1 */
 .line h1{
@@ -119,15 +143,27 @@ body{
 }
 
 .page1 .nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 2.3vw 5.5vw;
 }
 .nav-part2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 3vw;
 }
 .nav-part2 h4{
@@ -137,10 +173,16 @@ body{
 .hero{
     width: 72%;
     margin-left: 27%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     z-index: 999;
 }
   /* Css bug thats why we use 2 */
@@ -184,11 +226,15 @@ body{
     left: 0; */
     top: 60%;
     left: 10%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     opacity: 0;
 }
 #hero3{
     /* background-color: red; */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     z-index: 999;
     position: relative;
@@ -214,7 +260,8 @@ body{
 .videoContainer video{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     opacity: 0;
 }
 #vdoCrsr{
@@ -226,9 +273,15 @@ body{
     top: -15%;
     left: 70%;
     z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 #vdoCrsr i{
     font-size: 2vw;
@@ -266,17 +319,25 @@ body{
     /* background-color: red; */
     padding: 1vw;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .imgDiv{
     height: 38vw;
     width: 27vw;
     position: relative;
     overflow: hidden;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin: 2vw;
 }
 .imgDiv:nth-child(1){
@@ -286,8 +347,10 @@ body{
 .imgDiv img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
    
 }
 
@@ -301,9 +364,15 @@ body{
     width: 23vw;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 23vh;
     margin-left: 10vw;
     position: relative;
@@ -316,9 +385,15 @@ body{
     width: 23vw;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
     /* margin-top: 23vh; */
     /* margin-left: 10vw; */
@@ -334,11 +409,19 @@ body{
     top:0;
     left: 0;
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     scale: 0;
     border-radius: 50%;
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
 }
 .circleIn p{
@@ -347,8 +430,12 @@ body{
     width: 60%;
     font-weight: 500;
     scale: 0;
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
-    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
     opacity: 0;
 }
 .page3Circle1:hover .circleIn{
@@ -406,6 +493,8 @@ body{
     margin-bottom: 3vw;
 }
 .page4-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .page4-flex img{
@@ -425,9 +514,15 @@ body{
     margin-left: 24vw;
 }
 .blueElem{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.7vw 0;
     border-bottom: 2px solid #ffffff94;
 }
@@ -461,10 +556,14 @@ body{
     color: transparent;
     display: inline-block;
     margin-right: 16px;
-    animation-name: marqueeAnime;
-    animation-duration: 12s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: marqueeAnime;
+            animation-name: marqueeAnime;
+    -webkit-animation-duration: 12s;
+            animation-duration: 12s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 .elem2{
     white-space: nowrap;
@@ -478,11 +577,17 @@ body{
     font-weight: 500;
     color: transparent;
     display: inline-block;
-    transform: translateX(calc(-100% - 20px));
-    animation-name: marqueeAnime;
-    animation-duration: 12s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-transform: translateX(calc(-100% - 20px));
+        -ms-transform: translateX(calc(-100% - 20px));
+            transform: translateX(calc(-100% - 20px));
+    -webkit-animation-name: marqueeAnime;
+            animation-name: marqueeAnime;
+    -webkit-animation-duration: 12s;
+            animation-duration: 12s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: reverse;
 }
 .elem span{
@@ -555,9 +660,15 @@ body{
     margin: 3vw 0;
 }
 .footerDiv{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-right: 15vw;
     padding-top: 4vw;
     margin-bottom: 3vw;
@@ -582,6 +693,37 @@ body{
 /* FOOTER END */
 
 /* ANIMATION */
+@-webkit-keyframes loaderNow {
+    0%{
+        font-family: 'plain light';
+        -webkit-text-stroke: 0.1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: 'plain light';
+        -webkit-text-stroke: 0.1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: 'silk serif';
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 1;
+    }
+    100%{
+        font-family: 'silk serif';
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 0;
+    }
+    
+}
 @keyframes loaderNow {
     0%{
         font-family: 'plain light';
@@ -614,12 +756,25 @@ body{
     
 }
 
-@keyframes marqueeAnime {
+@-webkit-keyframes marqueeAnime {
     from{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     to{
-        transform: translateX(calc(-100% - 20px));
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+    }
+}
+
+@keyframes marqueeAnime {
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
     }
 }
 
@@ -640,18 +795,32 @@ body{
         overflow: hidden;
     }
     .line{
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         gap: 3vw;
     }
     /* Counter */
     #line1-part1{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 1vw;
     }
     #line1-part1 h5{
@@ -670,8 +839,10 @@ body{
         font-weight: 900;
         /* animation-name: loaderNow; */
         opacity: 0;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
     }
     /* All H1 */
     .line h1{
@@ -692,7 +863,9 @@ body{
     .page1 .nav{
         /* display: flex;
         align-items: center; */
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         padding: 4.3vw 4.5vw;
         position: fixed;
         width: 100%;
@@ -757,7 +930,8 @@ body{
     .videoContainer video{
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         opacity: 0;
     }
     #vdoCrsr{
@@ -768,11 +942,19 @@ body{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         z-index: 999;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     #vdoCrsr i{
         font-size: 5vw;
@@ -816,18 +998,29 @@ body{
         margin-top: 10vw;
         padding: 1vw;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .imgDiv{
         height: 110vw;
         width: 90vw;
         position: relative;
         overflow: hidden;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
         margin: 2vw;
         margin-bottom: 8vw;
     }
@@ -838,8 +1031,10 @@ body{
     .imgDiv img{
         height: 100%;
         width: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
     
     }
 
@@ -897,8 +1092,13 @@ body{
         margin-bottom: 3.5vw;
     }
     .page4-flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
     .page4-flex img{
         width: 100%;
@@ -921,9 +1121,15 @@ body{
         margin-bottom: 7vh;
     }
     .blueElem{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 3.5vw 0;
         border-bottom: 2px solid #ffffff94;
     }
@@ -956,10 +1162,14 @@ body{
         color: transparent;
         display: inline-block;
         margin-right: 16px;
-        animation-name: marqueeAnime;
-        animation-duration: 12s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        -webkit-animation-name: marqueeAnime;
+                animation-name: marqueeAnime;
+        -webkit-animation-duration: 12s;
+                animation-duration: 12s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
     }
     .elem2{
         white-space: nowrap;
@@ -973,11 +1183,17 @@ body{
         font-weight: 500;
         color: transparent;
         display: inline-block;
-        transform: translateX(calc(-100% - 20px));
-        animation-name: marqueeAnime;
-        animation-duration: 12s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        -webkit-transform: translateX(calc(-100% - 20px));
+            -ms-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+        -webkit-animation-name: marqueeAnime;
+                animation-name: marqueeAnime;
+        -webkit-animation-duration: 12s;
+                animation-duration: 12s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
         animation-direction: reverse;
     }
 
@@ -1037,13 +1253,22 @@ body{
         margin: 5vw 0;
     }
     .footerDiv{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding-right: 15vw;
         padding-top: 0vw;
         margin-bottom: 0vw;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .box{
         width: 20%;
@@ -1084,18 +1309,32 @@ body{
         overflow: hidden;
     }
     .line{
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
         gap: 3vw;
     }
     /* Counter */
     #line1-part1{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 1vw;
     }
     #line1-part1 h5{
@@ -1114,8 +1353,10 @@ body{
         font-weight: 900;
         /* animation-name: loaderNow; */
         opacity: 0;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
     }
     /* All H1 */
     .line h1{
@@ -1137,7 +1378,9 @@ body{
     .page1 .nav{
         /* display: flex;
         align-items: center; */
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         padding: 4.3vw 4.5vw;
         position: fixed;
         width: 100%;
@@ -1203,7 +1446,8 @@ body{
     .videoContainer video{
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         opacity: 0;
     }
     #vdoCrsr{
@@ -1214,11 +1458,19 @@ body{
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
         z-index: 999;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     #vdoCrsr i{
         font-size: 3vw;
@@ -1262,18 +1514,29 @@ body{
         margin-top: 10vw;
         padding: 1vw;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .imgDiv{
         height: 110vw;
         width: 90vw;
         position: relative;
         overflow: hidden;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
         margin: 2vw;
         margin-bottom: 8vw;
     }
@@ -1284,8 +1547,10 @@ body{
     .imgDiv img{
         height: 100%;
         width: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
     
     }
 
@@ -1343,8 +1608,13 @@ body{
         margin-bottom: 3.5vw;
     }
     .page4-flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
     .page4-flex img{
         width: 100%;
@@ -1367,9 +1637,15 @@ body{
         margin-bottom: 7vh;
     }
     .blueElem{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 3vw 0;
         border-bottom: 2px solid #ffffff94;
     }
@@ -1402,10 +1678,14 @@ body{
         color: transparent;
         display: inline-block;
         margin-right: 16px;
-        animation-name: marqueeAnime;
-        animation-duration: 12s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        -webkit-animation-name: marqueeAnime;
+                animation-name: marqueeAnime;
+        -webkit-animation-duration: 12s;
+                animation-duration: 12s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
     }
     .elem2{
         white-space: nowrap;
@@ -1419,11 +1699,17 @@ body{
         font-weight: 500;
         color: transparent;
         display: inline-block;
-        transform: translateX(calc(-100% - 20px));
-        animation-name: marqueeAnime;
-        animation-duration: 12s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        -webkit-transform: translateX(calc(-100% - 20px));
+            -ms-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+        -webkit-animation-name: marqueeAnime;
+                animation-name: marqueeAnime;
+        -webkit-animation-duration: 12s;
+                animation-duration: 12s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
         animation-direction: reverse;
     }
 
@@ -1483,13 +1769,22 @@ body{
         margin: 5vw 0;
     }
     .footerDiv{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding-right: 15vw;
         padding-top: 0vw;
         margin-bottom: 0vw;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .box{
         width: 20%;
