@@ -199,7 +199,7 @@ tl.from('#line1-part1',{
             } else{
                 h5timer.innerHTML = grow;
             }
-        },33)
+        },27)
     }
 });
 tl.to('.line h2',{
@@ -209,7 +209,7 @@ tl.to('.line h2',{
 tl.to('.loader', {
     opacity:0,
     duration: 0.2,
-    delay:4,
+    delay:2.7,
     onComplete: function() {
         // Remove the 'no-scroll' class from the body after animation is complete
         document.body.classList.remove('no-scroll');
