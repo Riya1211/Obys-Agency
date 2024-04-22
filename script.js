@@ -30,6 +30,7 @@ function locomotiveAnimation(){
 
 }
 function cursorAnimation(){
+    document.body.style.cursor = 'none';
     // document.addEventListener('mousemove', function(dets){
     //     gsap.to('#crsr',{
     //         left: dets.x,
