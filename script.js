@@ -1,4 +1,4 @@
-window.set_cursor('None');
+document.body.style.cursor = 'none'; 
 function locomotiveAnimation(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -30,8 +30,7 @@ function locomotiveAnimation(){
     ScrollTrigger.refresh();
 
 }
-function cursorAnimation(){
-        
+function cursorAnimation(){     
         // Second Page Video
         var vdoContainer = document.querySelector('.videoContainer');
         var video = document.querySelector('.videoContainer video');
